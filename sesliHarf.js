@@ -1,18 +1,20 @@
-function countVowels(sentence) {
-  
+function sesliHarfSayisi(cumle) {
+  const sesliHarfler = "aeıioöuüAEIİOÖUÜ";
+  let sayac = 0;
 
-  let count = 0;
+  for (let i = 0; i < cumle.length; i++) {
+    if (i < cumle.length) {  
+      let harf = cumle[i];
 
-  for (let char of sentence) {
-    if (
-      char === 'a' || char === 'e' || char === 'i' || char === 'o' || char === 'u' ||
-      char === 'A' || char === 'E' || char === 'I' || char === 'O' || char === 'U') {
-      count++;
+      if (sesliHarfSayisi) {
+        sayac++ ;
+      }
     }
   }
 
-  return count;
+  return sayac;
 }
-const sentence = "Merhaba. Node.js eğitimine hoşgeldin.";
-const totalVowels = countVowels(sentence);
-console.log(`Sesli harf sayısı: ${totalVowels}`);
+
+const cumle = "Merhaba, benim adım Yusuf.";
+
+
